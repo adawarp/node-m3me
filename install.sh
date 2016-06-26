@@ -5,3 +5,4 @@ cd ./sdk/
 ./install-meme-lib.sh
 mvn install
 mvn compile
+mvn dependency:copy-dependencies

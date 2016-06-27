@@ -5,6 +5,7 @@
     "debug": "registry:dt/debug#0.0.0+20160317120654",
     "java": "registry:dt/java#0.5.4+20160317120654",
     "noble": "registry:dt/noble#0.0.0+20160406120732",
-    "node": "registry:dt/node#6.0.0+20160621231320"
+    "node": "registry:dt/node#6.0.0+20160621231320",
+    "rx": "npm:rx/ts/rx.all.d.ts"
   }
 }

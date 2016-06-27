@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "noImplicitAny": false,
+        "outDir": "./build/",
+        "sourceMap": false
+    },
+  
+    "files": [
+      "src/index.ts",
+      "src/memeDevice.ts",
+      "src/meme.ts"
+    ],
+
+    "exclude": [
+        "node_modules"
+    ]
+}

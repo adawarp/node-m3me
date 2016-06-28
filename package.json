@@ -1,15 +1,16 @@
 {
-  "name": "meme",
-  "version": "1.0.0",
-  "description": "",
+  "name": "node-meme",
+  "version": "0.1.0",
+  "description": "JINSE Meme API for NodeJS",
   "main": "index.js",
   "scripts": {
     "start": "node build/index.js",
     "watch": "tsc -pretty -w -p tsconfig.json",
+    "build": "tsc -pretty -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kentaro Teramoto",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "dependencies": {
     "debug": "^2.2.0",
     "java": "^0.7.2",

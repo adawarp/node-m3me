@@ -1,3 +1,3 @@
 [submodule "sdk"]
 	path = sdk
-	url = git://github.com/hrl7/meme-sdk-wrapper.git
+	url = git://github.com/FantomJAC/meme-sdk-wrapper.git

@@ -6,5 +6,6 @@ Download JINSMemeSdk, and unzip.
   $ ./install.sh /path/to/meme/sdk/1.1.0/MemeLib.jar
   $ npm install
   $ node example.js
+  ( turn on meme )
 ```
 tested on node v5.9.1

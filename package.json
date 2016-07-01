@@ -1,22 +1,35 @@
 {
-  "name": "node-meme",
+  "name": "node-m3me",
   "version": "0.1.0",
   "description": "JINSE Meme API for NodeJS",
   "main": "index.js",
+
   "scripts": {
     "start": "node build/index.js",
     "watch": "tsc -pretty -w -p tsconfig.json",
     "build": "tsc -pretty -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Kentaro Teramoto",
-  "license": "MIT",
+
+  "author": {
+    "name": "Kentaro Teramoto",
+    "email": "hrlclb@gmail.com",
+    "url": "http://horol.org"
+  },
+
+  "contributors": [
+    "Shotaro Uchida"
+  ],
+
+  "license": "GPL-3.0",
+
   "dependencies": {
     "debug": "^2.2.0",
     "java": "^0.7.2",
     "noble": "^1.6.0",
     "rx": "^4.1.0"
   },
+
   "devDependencies": {
     "typescript": "^1.8.10"
   }

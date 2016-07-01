@@ -1,6 +1,5 @@
 {
   "name": "node-m3me",
-  "version": "0.1.0",
   "description": "JINSE Meme API for NodeJS",
   "main": "index.js",
 
@@ -32,5 +31,7 @@
 
   "devDependencies": {
     "typescript": "^1.8.10"
-  }
+  },
+
+  "version": "0.1.1"
 }

@@ -1,14 +1,15 @@
 "use strict";
 const Debug = require("debug");
 const java = require("java");
+const path = require("path");
 const fs = require("fs");
-const debug = Debug("MemeDevise");
-const baseDir = "./sdk/target/dependency";
+const debug = Debug("Meme:Devise");
+const ROOT = path.join(__dirname, "/../");
+const baseDir = path.join(ROOT, "/sdk/build/libs");
 const dependencies = fs.readdirSync(baseDir);
-dependencies.forEach(function (dependency) {
-    java.classpath.push(baseDir + "/" + dependency);
+dependencies.forEach((dependency) => {
+    java.classpath.push(path.join(baseDir, dependency));
 });
-java.classpath.push("./sdk/target/classes");
 java.options.push('-Xverify:none');
 class MemeDevice {
     constructor(onDeviceReady, onWriteRequest, onRealtimeData) {
@@ -23,7 +24,7 @@ class MemeDevice {
                 }
             },
             writeCommand: gattValue => {
-                debug("WriteCommand: ", gattValue);
+                debug("WriteCommand: ");
                 if (typeof this.onWriteRequest === "function") {
                     this.onWriteRequest(gattValue);
                 }
@@ -40,6 +41,11 @@ class MemeDevice {
     startDataReport() {
         debug("start deta report");
         this._sdk.startDataReportSync();
+    }
+    stopDataReport() {
+        debug("stop deta report");
+        this._sdk.stopDataReport();
+        this._sdk.dispose();
     }
     push(data) {
         this._sdk.responseCommandSync(toJavaByteArray(data));

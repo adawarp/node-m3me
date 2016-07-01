@@ -3,16 +3,18 @@
 import * as Debug from "debug";
 import * as java from "java";
 
+const path = require("path");
 const fs = require("fs");
-const debug = Debug("MemeDevise");
+const debug = Debug("Meme:Devise");
 
-const baseDir = "./sdk/target/dependency";
+const ROOT = path.join(__dirname, "/../");
+const baseDir = path.join(ROOT, "/sdk/build/libs");
 const dependencies = fs.readdirSync(baseDir);
 
-dependencies.forEach(function(dependency){
-  java.classpath.push(baseDir + "/" + dependency);
-})
-java.classpath.push("./sdk/target/classes");
+dependencies.forEach((dependency) => {
+  java.classpath.push(path.join(baseDir, dependency));
+});
+
 java.options.push('-Xverify:none');
 
 class MemeDevice {

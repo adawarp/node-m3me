@@ -37,7 +37,7 @@ class MemeDevice {
       },
 
       writeCommand: gattValue => {
-        debug("WriteCommand: ", gattValue);
+        debug("WriteCommand: ");
         if (typeof this.onWriteRequest === "function") {
           this.onWriteRequest(gattValue);
         }
@@ -56,6 +56,12 @@ class MemeDevice {
   public startDataReport(): void {
     debug("start deta report");
     this._sdk.startDataReportSync();
+  }
+
+  public stopDataReport(): void {
+    debug("stop deta report");
+    this._sdk.stopDataReport();
+    this._sdk.dispose();
   }
 
   public push(data) {

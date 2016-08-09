@@ -24,7 +24,7 @@
 
   "dependencies": {
     "debug": "^2.2.0",
-    "java": "^0.7.2",
+    "java": "git+https://github.com/hrl7/node-java.git#e07e3494a",
     "noble": "^1.6.0",
     "rx": "^4.1.0"
   },
@@ -33,5 +33,5 @@
     "typescript": "^1.8.10"
   },
 
-  "version": "0.1.1"
+  "version": "0.1.2"
 }
